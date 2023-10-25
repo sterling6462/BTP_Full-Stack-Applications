@@ -17,7 +17,7 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "/service/RiskManagement/",
+        "uri": "service/RiskManagement/",
         "type": "OData",
         "settings": {
           "annotations": [],
@@ -30,6 +30,16 @@
       "inbounds": {
         "RiskManagementRisks-display": {
           "semanticObject": "RiskManagementRisks",
+          "action": "display",
+          "title": "{{flpTitle}}",
+          "subTitle": "{{flpSubtitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        },
+        "RiskManagement-display": {
+          "semanticObject": "RiskManagement",
           "action": "display",
           "title": "{{flpTitle}}",
           "subTitle": "{{flpSubtitle}}",
@@ -147,5 +157,9 @@
   "sap.fiori": {
     "registrationIds": [],
     "archeType": "transactional"
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "lcap.RiskManagement"
   }
 }
